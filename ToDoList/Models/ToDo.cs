@@ -11,5 +11,6 @@ namespace ToDoList.Models
 		public int Id { get; set; }
 		[Required]
 		public string Context { get; set; }
+		public DateTime Create { get; set; }
 	}
 }
