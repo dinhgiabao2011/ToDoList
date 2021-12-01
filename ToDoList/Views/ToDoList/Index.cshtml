@@ -16,7 +16,7 @@
                 @Html.DisplayNameFor(model => model.Context)
             </th>
             <th>
-                @Html.DisplayNameFor(model => model.Create)
+                @Html.DisplayNameFor(model => model.DateTime)
             </th>
             <th></th>
         </tr>
@@ -28,7 +28,7 @@
                 @Html.DisplayFor(modelItem => item.Context)
             </td>
             <td>
-                @Html.DisplayFor(modelItem => item.Create)
+                @Html.DisplayFor(modelItem => item.DateTime)
             </td>
             <td>
                 <a asp-action="Edit" asp-route-id="@item.Id">Edit</a> |
