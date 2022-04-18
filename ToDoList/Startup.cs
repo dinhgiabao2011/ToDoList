@@ -12,6 +12,8 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
 using ToDoList.Data;
+using ToDoList.Data.IRepository;
+using ToDoList.Data.Repository;
 
 namespace ToDoList
 {
@@ -35,6 +37,9 @@ namespace ToDoList
 			services.AddDefaultIdentity<IdentityUser>(options => options.SignIn.RequireConfirmedAccount = true)
 					.AddEntityFrameworkStores<ApplicationDbContext>();
 			services.AddControllersWithViews();
+			services.AddTransient(typeof(IRepository<>), typeof(Repository<>));
+			services.AddTransient<IToDoRepository, ToDoRepository>();
+			services.AddTransient<IUnitOfWork, UnitOfWork>();
 		}
 
 		// This method gets called by the runtime. Use this method to configure the HTTP request pipeline.

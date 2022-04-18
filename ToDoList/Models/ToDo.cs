@@ -9,7 +9,7 @@ namespace ToDoList.Models
 	public class ToDo
 	{
 		public int Id { get; set; }
-		[Required]
-		public string Context { get; set; }
+		public string Name { get; set; }
+		public string Description { get; set; }
 	}
 }
